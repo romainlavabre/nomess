@@ -1,0 +1,63 @@
+{% extends "admin/layout/layoutSpace.twig" %}
+
+{% block title %}
+    Newsletters
+{% endblock title %}
+
+{% block container %}
+    <div class="row-fluid">
+        <button class="btn btn-success"  data-clipboard-text="
+
+        {% for newsletter in param %}
+            {% for val in newsletter %}
+                {{ val._email ~ ';'}}
+            {% endfor %}
+        {% endfor %}
+
+        ">
+            Copier la liste d'email
+        </button>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="widget-box">
+                <div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
+                   <h5>Vos emails de newsletter</h5>
+                </div>
+                <div class="widget-content nopadding">
+                    <form action="{{ WEBROOT ~ 'admin/add' }}" method="post">
+                        <table class="table table-bordered data-table">
+                            <thead>
+                                <tr>
+                                  <th>Email</th>
+                                  <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" name="email" class="form-control" required></td>
+                                    <td><button type="submit" class="btn btn-info">Créer</button>
+                                </tr>
+                                {% for value in param.newsletter %}
+                                    <tr>
+                                        <td>{{ value._email }}</td>
+                                        <td>
+                                            <a href="{{ WEBROOT ~ 'admin/delete?key=' ~ value._id }}"><button type="button" class="btn btn-danger">Supprimer</button></a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+{% endblock container %}
+
+{% block resFooter %}
+    {% include "admin/inc/res-newsletter.twig" %}
+    {% include "admin/inc/active-two.twig" %}
+{% endblock resFooter %}

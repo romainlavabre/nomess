@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<config>
+	<routes url="admin">
+		<controller>Admin</controller>
+		<get action="index"/>
+		<post action="treatAuth"/>
+	</routes>
+	<routes url="admin/dashboard">
+		<controller>Admin</controller>
+		<get action="enter"/>
+		<post action="enter"/>
+	</routes>
+	<routes url="admin/newsletter">
+		<controller>Admin</controller>
+		<get action="newsletter"/>
+		<post action="newsletter"/>
+	</routes>
+	<routes url="admin/add">
+		<controller>Admin</controller>
+		<get action="addNewsletter"/>
+		<post action="addNewsletter"/>
+	</routes>
+	<routes url="admin/delete">
+		<controller>Admin</controller>
+		<get action="deleteNewsletter"/>
+		<post action="deleteNewsletter"/>
+	</routes>
+	<routes url="admin/content">
+		<controller>Admin</controller>
+		<get action="content"/>
+		<post action="content"/>
+	</routes>
+	<routes url="admin/content/update">
+		<controller>Admin</controller>
+		<get action="updateSection"/>
+		<post action="updateSection"/>
+	</routes>
+	<routes url="admin/content/restore">
+		<controller>Admin</controller>
+		<get action="restoreSection"/>
+		<post action="restoreSection"/>
+	</routes>
+	<routes url="admin/statistic">
+		<controller>Admin</controller>
+		<get action="stat"/>
+		<post action="stat"/>
+	</routes>
+	<routes url="admin/statistic/reset">
+		<controller>Admin</controller>
+		<get action="resetStat"/>
+		<post action="resetStat"/>
+	</routes>
+	<routes url="accueil">
+		<controller>Welcome</controller>
+		<get action="index"/>
+		<post action=""/>
+	</routes>
+</config>

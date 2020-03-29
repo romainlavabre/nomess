@@ -1,0 +1,9 @@
+{
+    "typescript.suggest.completeJSDocs": false,
+    "typescript.suggest.includeAutomaticOptionalChainCompletions": false,
+    "typescript.suggestionActions.enabled": false,
+    "typescript.suggest.enabled": false,
+    "typescript.preferences.renameShorthandProperties": false,
+    "typescript.format.insertSpaceAfterCommaDelimiter": false,
+    "typescript.format.insertSpaceAfterKeywordsInControlFlowStatements": false
+}
