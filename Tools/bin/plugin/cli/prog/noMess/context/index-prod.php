@@ -23,10 +23,7 @@ if(isset($_POST['resetCacheRoute'])){
 
 require (ROOT . 'Api/vendor/autoload.php');
 require (ROOT . 'Api/config/config-prod.php');
-require (ROOT . 'Api/vendor/NoMess/WorkException.php');
-require (ROOT . 'Api/vendor/NoMess/function.php');
 
-$CONTEXT = "PROD";
 
 if(!file_exists(ROOT . "Api/var/cache/routes/routing.xml")){
 	$buildRouting = new NoMess\Core\BuildRoutes(ROOT . "Api/var/cache/routes/routing.xml");
@@ -39,6 +36,7 @@ $builder->addDefinitions(ROOT . 'Api/config/di-definitions.php');
 $builder->enableCompilation(ROOT . 'Api/var/cache/di'); 
 $builder->writeProxiesToFile(true, ROOT . 'Api/var/cache/di');
 $container = $builder->build();
+
 $controller = "";
 $action = "";
 
@@ -59,8 +57,7 @@ foreach($file->routes as $value){
 } 
 
 if(file_exists(ROOT . "Api/src/Controllers/" . ucfirst($controller) . ".php")){	
-	$controller = "App\\Controllers\\" . ucfirst($controller);
-	$controller = $container->get($controller);
+	$controller = $container->get("App\\Controllers\\" . ucfirst($controller));
 	$controller->$action();
 }
 

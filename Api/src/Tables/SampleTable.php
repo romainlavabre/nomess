@@ -2,25 +2,24 @@
 namespace App\Tables;
 
 
-use NoMess\Core\AppManager;
 use App\Modules\Sample\Entity\Sample;
 
-class SampleTable extends AppManager{
+class SampleTable 
+{
 
 	/**
 	 * Instance de PDO
 	 *
 	 * @var \PDO
 	 */
-	private $db;
+	private $database;
 
 	public function __construct(\PDO $db) {
-		$this->db = $db;
+		$this->database = $db;
 	}
 
 	public function read() {
 		$sample = new Sample();
-
 		return null;
 	}
 

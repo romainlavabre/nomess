@@ -20,9 +20,9 @@ class Welcome extends ControllerManager{
 	/**
 	 * Instance de ServiceManager
 	 *
-	 * @var ServiceManager
+	 * @var ServiceManagerSample
 	 */
-	private $serviceManager;
+	private $sm;
 
 	/**
 	 * With php-di
@@ -32,18 +32,18 @@ class Welcome extends ControllerManager{
 	public function __construct(ServiceManagerSample $serviceManagerSample,
 								Response $res) 						
 	{
-		$this->serviceManager = $serviceManagerSample;
+		$this->sm = $serviceManagerSample;
 		$this->response = $res;
 	}
 
 	/**
-	 * @Route{"accueil", "GET"} 
+	 * @Route{"", "GET"} 
 	 *
 	 * @return void
 	 */
 	function index() : void
 	{
-		$extract = $this->serviceManager->sample();
+		$this->sm->sample();
 
 		$this->setAttribut('mixed key', 'mixed value');
 

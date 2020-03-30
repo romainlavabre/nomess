@@ -159,9 +159,9 @@
 		</button>
 		<div class="nm_dropdown-menu">
 			<?php
-            foreach ($tree->getTree() as $value) {
+            /*foreach ($tree->getTree() as $value) {
                 echo '<button class="nm_btn nm_dropdown-item nm_vert nm_no-cursor" style="color: #333;">'.$value.'</button>';
-            }
+            }*/
             ?>
 		</div>
 	</div>
@@ -506,7 +506,7 @@ foreach($fileIndex as $key => $value){
 		<div class="nm_modal-dialog nm_modal-lg" role="nm_document">
 			<div class="nm_modal-content nm_no-radius">
 				<div class="nm_modal-header nm_rouge nm_no-radius">
-					<h5 class="h5 nm_h5 nm_modal-title" id="examplenm_modalLabel">Coverage</h5>
+					<h5 class="h5 nm_h5 nm_modal-title" id="examplenm_modalLabel">Php-Info</h5>
 					<button type="button" class="nm_close" data-dismiss="nm_modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>

@@ -16,7 +16,7 @@ cache-r()
 cache-t()
 {
     echo 'Suppression du cache routing...'
-    sudo rm Web/cache/*
+    sudo rm -rf Web/cache/*
 }
 
 --help()

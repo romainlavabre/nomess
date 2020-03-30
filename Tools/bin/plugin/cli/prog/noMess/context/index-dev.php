@@ -25,21 +25,13 @@ if(isset($_POST['resetCacheRoute'])){
 }
 
 require (ROOT . 'Api/vendor/autoload.php');
-
-
 require (ROOT . 'Api/config/config-dev.php');
 require (ROOT . 'Tools/bin/tools/time.php');
-require (ROOT . 'Tools/bin/tools/tree.php');
-require (ROOT . 'Api/vendor/NoMess/WorkException.php');
-require (ROOT . 'Api/vendor/NoMess/function.php');
 
-$CONTEXT = "DEV";
-global $vController, $action, $method, $_GET, $_POST, $time, $tree;
+global $vController, $action, $method, $time, $tree;
 
-$time = new NoMess\Tools\Time();
+$time = new Time();
 $time->startController();
-
-$tree = new NoMess\Tools\Tree();
 
 $debut = microtime(true);
 
@@ -75,11 +67,8 @@ foreach($file->routes as $value){
 } 
 
 if(file_exists(ROOT . "Api/src/Controllers/" . ucfirst($controller) . ".php")){	
-	$controller = "App\\Controllers\\" . ucfirst($controller);
-	$controller = $container->get($controller);
+	$controller = $container->get("App\\Controllers\\" . ucfirst($controller));
 	$controller->$action();
-}else{
-	echo "error 404";
 }
 
 require ROOT . 'Tools/bin/tools/toolbar.php';

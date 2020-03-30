@@ -1,5 +1,5 @@
 <?php
-require 'fonction-Installer.php';
+require 'function-Installer.php';
 
 $api = '../Api/config/';
 

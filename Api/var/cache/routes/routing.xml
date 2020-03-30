@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <config>
-	<routes url="accueil">
+	<routes url="">
 		<controller>Welcome</controller>
 		<get action="index"/>
 		<post action=""/>

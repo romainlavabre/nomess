@@ -74,6 +74,8 @@ class Response implements SubjectInterface{
         foreach($data as $key => $value){
             if($key === 'stamp'){
                 $find = true;
+            }else if($key !== 'stamp' && $key !== 'attribut'){
+                throw new WorkException('La clé ' . $key . 'n\'est pas permise');
             }
         }
 

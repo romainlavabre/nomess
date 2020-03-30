@@ -78,7 +78,7 @@ class BuildRoutes{
 
                                     $fonction = $method;
 
-                                    $route = arrayByKey(trim($url), $this->tabRoute);
+                                    $route = Tools::arrayByKey(trim($url), $this->tabRoute);
 
                                     if(is_null($route) || empty($route)){
                                         $route = new Routes();

@@ -1,7 +1,5 @@
 <?php
-/*
- * @eclipse-formatter:off
- */
+
 namespace NoMess\Core;
 
 

@@ -1,6 +1,6 @@
 noMess
 
-version = 2.10.0
+version = 2.10.1
 Language = php
 version-language = 7.2
 require-version = 7.1
@@ -29,6 +29,10 @@ Db service: Mysql
 
 
 Changes:
+
+COMPARE noMess 2.10.0 ----------------------------
+
+Réparation de bug
 
 COMPARE noMess 2.5.0 ----------------------------
 

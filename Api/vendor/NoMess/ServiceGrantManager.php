@@ -1,14 +1,20 @@
 <?php
-/*
- * @eclipse-formatter:off
- */
+
 namespace NoMess\Core;
 
 
-class ServiceGrantManager extends AppManager{
+class ServiceGrantManager extends AppManager
+{
 
-	// Verifie si les valeurs du tableau existe, on peut exclure une création d'erreur (par la clé)
-	public function checkData(array $tabData, array $exclude = null) {
+	/**
+	 * Verifie si les valeurs du tableau existe, on peut exclure une création d'erreur (par la clé)
+	 *
+	 * @param array $tabData 
+	 * @param array $exclude
+	 * @return void
+	 */
+	public function checkData(array $tabData, array $exclude = null)
+	{
 		foreach($tabData as $key => $value){
 			if(empty($value)){
 				if($exclude != null){
