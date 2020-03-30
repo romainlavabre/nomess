@@ -28,19 +28,20 @@ require (ROOT . 'Api/vendor/autoload.php');
 
 
 require (ROOT . 'Api/config/config-dev.php');
-$CONTEXT = "DEV";
 require (ROOT . 'Tools/bin/tools/time.php');
+require (ROOT . 'Tools/bin/tools/tree.php');
+require (ROOT . 'Api/vendor/NoMess/WorkException.php');
+require (ROOT . 'Api/vendor/NoMess/function.php');
+
+$CONTEXT = "DEV";
 global $vController, $action, $method, $_GET, $_POST, $time, $tree;
+
 $time = new NoMess\Tools\Time();
 $time->startController();
-require (ROOT . 'Tools/bin/tools/tree.php');
+
 $tree = new NoMess\Tools\Tree();
 
 $debut = microtime(true);
-
-require (ROOT . 'Api/vendor/NoMess/WorkException.php');
-require (ROOT . 'Api/vendor/NoMess/function.php');
-require (ROOT . 'Api/config/config-plugin.php');
 
 if(!file_exists(ROOT . "Api/var/cache/routes/routing.xml")){
 	$buildRouting = new NoMess\Core\BuildRoutes(ROOT . "Api/var/cache/routes/routing.xml");
@@ -78,11 +79,9 @@ if(file_exists(ROOT . "Api/src/Controllers/" . ucfirst($controller) . ".php")){
 	$controller = $container->get($controller);
 	$controller->$action();
 }else{
-	require "web/404.php";
+	echo "error 404";
 }
 
 require ROOT . 'Tools/bin/tools/toolbar.php';
 
 ?>
-
-

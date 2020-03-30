@@ -3,15 +3,4 @@
 <config>
     <!-- Template depuis Web/public/ -->
     <template stamp="welcome:index" tt="standard/welcome.twig"/>
-    
-    <template stamp="admin:index" tt="admin/auth.twig"/>
-    <template stamp="admin:treatAuth" tt="admin/home.twig" ft="admin/auth.twig"/>
-    <template stamp="admin:enter" tt="admin/home.twig"/>
-    <template stamp="admin:newsletter" tt="admin/newsletter.twig"/>
-    <template stamp="admin:addNewsletter" tt="admin/newsletter.twig"/>
-    <template stamp="admin:deleteNewsletter" tt="admin/newsletter.twig"/>
-    <template stamp="admin:content" tt="admin/content.twig"/>
-    <template stamp="admin:updateSection" tt="admin/content.twig"/>
-    <template stamp="admin:restoreSection" tt="admin/content.twig"/>
-    <template stamp="admin:stat" tt="admin/statistic.twig"/>
 </config>

@@ -1,9 +1,9 @@
 <?php
 // Data Base
 global $DataBase;
-$DataBase['host'] = 'localhost';
-$DataBase['dbname'] = 'noMess';
-$DataBase['user'] = 'restore';
-$DataBase['password'] = '0000';
+$DataBase['host'] = 'hostVal';
+$DataBase['dbname'] = 'dbnameVal';
+$DataBase['user'] = 'userVal';
+$DataBase['password'] = 'passwordVal';
 
 $Log = 'Api/var/log/log-dev.txt';

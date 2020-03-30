@@ -3,7 +3,7 @@
 // Array ------------------------------------------------------------------------------
 function arrayByKey($key, array $array) {
 	foreach($array as $keyArray => $value){
-		if($keyArray === $key){
+		if($keyArray == $key){
 			return $value;
 		}
 	}
@@ -15,11 +15,11 @@ function arrayByValue($value, $tab, $method = null) {
 	foreach($tab as $value2){
 
 		if($method !== null){
-			if(trim($value2->$method()) === trim($value)){
+			if(trim($value2->$method()) == trim($value)){
 				return $value2;
 			}
 		}else{
-			if($value === $value2){
+			if($value == $value2){
 				return $value2;
 			}
 		}

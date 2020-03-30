@@ -37,13 +37,15 @@ class Welcome extends ControllerManager{
 	}
 
 	/**
-	 * @Route{"accueil", "GET"}
+	 * @Route{"accueil", "GET"} 
 	 *
 	 * @return void
 	 */
 	function index() : void
 	{
-		$this->serviceManager->sample();
+		$extract = $this->serviceManager->sample();
+
+		$this->setAttribut('mixed key', 'mixed value');
 
 		$this->response->render([
 				'stamp' => 'Welcome:index',

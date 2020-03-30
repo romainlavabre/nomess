@@ -22,10 +22,9 @@ if(isset($_POST['resetCacheRoute'])){
 }
 
 require (ROOT . 'Api/vendor/autoload.php');
-require (ROOT . 'config/config-prod.php');
+require (ROOT . 'Api/config/config-prod.php');
 require (ROOT . 'Api/vendor/NoMess/WorkException.php');
 require (ROOT . 'Api/vendor/NoMess/function.php');
-require (ROOT . 'Api/config/config-plugin.php');
 
 $CONTEXT = "PROD";
 
@@ -38,7 +37,7 @@ $builder = new DI\ContainerBuilder();
 $builder->useAnnotations(true);
 $builder->addDefinitions(ROOT . 'Api/config/di-definitions.php');
 $builder->enableCompilation(ROOT . 'Api/var/cache/di'); 
-$builder->writeProxiesToFile(true, ROOT . 'Api/var/cache/di/proxies');
+$builder->writeProxiesToFile(true, ROOT . 'Api/var/cache/di');
 $container = $builder->build();
 $controller = "";
 $action = "";
@@ -63,8 +62,6 @@ if(file_exists(ROOT . "Api/src/Controllers/" . ucfirst($controller) . ".php")){
 	$controller = "App\\Controllers\\" . ucfirst($controller);
 	$controller = $container->get($controller);
 	$controller->$action();
-}else{
-	require "web/404.php";
 }
 
 ?>

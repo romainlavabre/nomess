@@ -4,7 +4,101 @@
  */
     global $vController, $action, $method, $_GET, $_POST, $time, $tree;
     $tabOpcache = opcache_get_configuration();
-    $tabStatus = opcache_get_status();
+	$tabStatus = opcache_get_status();
+
+	function controlDirectory(string $path, array $tab): bool {
+		foreach($tab as $value){
+			if($value === $path){
+				return true;
+			}
+		}
+	
+		return false;
+	}
+	
+	function searchreportCoverage($pathDirSrc): ?array {
+		$tabGeneral = scandir($pathDirSrc);
+	
+		$tabDirWait = array();
+	
+		$dir = $pathDirSrc;
+	
+		$noPass = count(explode('/', $dir));
+	
+		$fileIndex = array();
+	
+		do{
+			$stop = false;
+	
+			do{
+				$tabGeneral = scandir($dir);
+				$dirFind = false;
+	
+				for($i = 0; $i < count($tabGeneral); $i++){
+					if(is_dir($dir . $tabGeneral[$i] . '/') && $tabGeneral[$i] !== '.' && $tabGeneral[$i] !== '..'){
+						if(!controlDirectory($dir . $tabGeneral[$i] . '/', $tabDirWait)){
+							$dir = $dir . $tabGeneral[$i] . '/';
+							$dirFind = true;
+							break;
+						}
+					}
+				}
+	
+				if(!$dirFind){
+					$tabDirWait[] = $dir;
+					$tabEx = explode('/', $dir);
+					unset($tabEx[count($tabEx) - 2]);
+					$dir = implode('/', $tabEx);
+				}
+	
+				if(count(explode('/', $dir)) < $noPass){
+					$stop = true;
+					break;
+				}
+			}
+			while($dirFind === true);
+		}
+		while($stop === false);
+	
+		foreach($tabDirWait as $value){
+			$scan = scandir($value);
+			
+			foreach($scan as $content){
+				
+				if($content === 'index.html'){
+					$tabPath = explode('/', $value);
+
+					$tabPath[count($tabPath) - 1] = 'index.html';
+					//build path
+
+					$path = 'Tests/reports/';
+					$pass = false;
+
+					foreach($tabPath as $dir){
+						if($pass === true){
+							$path = $path . $dir;
+
+							if($dir !== 'index.html'){
+								$path = $path . '/';
+							}
+						}
+
+						if($dir === 'reports'){
+							$pass = true;
+						}
+					}
+
+					$fileIndex[$path] = $tabPath[count($tabPath) - 2] . '/index.html';
+				}
+				
+			}
+		}
+
+
+		return $fileIndex;
+	}
+
+	$fileIndex = searchreportCoverage('Tests/reports/');
 ?>
 <link rel="stylesheet" href="<?php echo WEBROOT.'Tools/bin/tools/bootstrap-toolbar.css'; ?>">
 <style type="text/css">
@@ -58,7 +152,7 @@
 </style>
 <div id="toolbar">
 <div class="nm_container-fluid nm_fixed-bottom" style="background: #333;">
-	<button class="nm_btn nm_noir nm_no-radius nm_no-cursor">Mode Développement</button>
+	<button class="nm_btn nm_noir nm_no-radius nm_no-cursor">Dev</button>
 	<div class="nm_btn-group nm_dropup">
 		<button type="button" class="nm_btn nm_rouge nm_no-radius" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			<?php echo (string) $vController.' - '.(string) $action.' - '.$method; ?>
@@ -125,17 +219,32 @@
 			Caches
 		</button>
 		<div class="nm_dropdown-menu">
-			<form method="post" action="<?php echo WEBROOT . $_GET['p']; ?>">
+			<form method="post" action="<?php echo WEBROOT . $_GET['p']; ?>" >
 				<input name="resetCacheRoute" type="hidden">
 				<input type="submit" value="Vider: Routing" class="nm_btn nm_dropdown-item nm_bleu" style="width: 100%;">
 			</form>
-			<form method="post" action="<?php echo WEBROOT . $_GET['p']; ?>">
-				<input name="resetCacheMse" type="hidden">
-				<input type="submit" value="Vider: MSE" class="nm_btn nm_dropdown-item nm_bleu" style="width: 100%;">
-			</form>
 		</div>
 	</div>
-	<div style="float: right" class="pull-right">
+	<div class="nm_btn-group nm_dropup">
+		<button type="button" class="nm_btn nm_bleu nm_dropdown-toggle nm_no-radius" data-toggle="nm_dropdown" aria-haspopup="true" aria-expanded="false">
+			PHPUnit
+		</button>
+		<div class="nm_dropdown-menu">
+
+			<?php
+			if(count($fileIndex) === 0){
+				echo '<button class="nm_btn nm_dropdown-item nm_vert nm_no-cursor">No report found</button>';
+			}
+
+			$i = 0;
+			foreach($fileIndex as $key => $value){
+				echo '<button class="nm_btn nm_dropdown-item nm_vert" style="cursor: pointer;" data-toggle="nm_modal" data-target="#report' . $i . '">' . $value . '</button>';
+				$i++;
+			}
+			?>
+		</div>
+	</div>
+	<div style="float: right">
 		<div class="nm_btn-group nm_dropup">
 			<button type="button" class="nm_btn nm_vert nm_dropdown-toggle nm_no-radius" data-toggle="nm_dropdown" aria-haspopup="true" aria-expanded="false">
 				Mods & Lib
@@ -158,15 +267,15 @@
                     ?>
 					<button class="nm_btn nm_dropdown-item nm_rouge nm_no-cursor">OpCache</button>
 				<?php
-                }?>
+				}?>
+				<button class="nm_btn nm_dropdown-item nm_bleu nm_no-cursor">Twig 3.0</button>
+				<button class="nm_btn nm_dropdown-item nm_bleu nm_no-cursor">PHPUnit.8.5</button>
 				<button class="nm_btn nm_dropdown-item nm_bleu nm_no-cursor">PHP-DI 6</button>
 				<button class="nm_btn nm_dropdown-item nm_bleu nm_no-cursor">PHP-REF</button>
 			</div>
 		</div>
-		<a style="text-decoration: none" class="nm_a nm_btn nm_no-radius nm_rouge" target="_blank" href="<?php echo WEBROOT.'system/tools/phpinfo.php'; ?>">
-			php-info
-		</a>
-		<button class="nm_btn nm_bleu nm_no-radius">noMess.2.5.0</button>
+		<button class="nm_btn nm_rouge" data-toggle="nm_modal" data-target="#phpinfo">phpinfo</button>
+		<button class="nm_btn nm_bleu nm_no-radius">noMess.2.10.0</button>
 	</div>
 </div>
 
@@ -363,8 +472,58 @@
 	</div>
 </div>
 <?php
-                }?>
+}	
+$i = 0;
+foreach($fileIndex as $key => $value){
+	?>
+	<div class="nm_modal fade" id="<?php echo 'report' . $i ?>" tabindex="-1" role="dialog" aria-labelledby="examplenm_modalLabel" aria-hidden="true">
+		<div class="nm_modal-dialog nm_modal-lg" role="nm_document">
+			<div class="nm_modal-content nm_no-radius">
+				<div class="nm_modal-header nm_rouge nm_no-radius">
+					<h5 class="h5 nm_h5 nm_modal-title" id="examplenm_modalLabel">Coverage</h5>
+					<button type="button" class="nm_close" data-dismiss="nm_modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="nm_modal-body">
+					<div class="nm_container">
+						<iframe src="<?php echo $key ?>" style="width: 100%;" height="500"></iframe>
+					</div>
+				</div>
+				<div class="nm_modal-footer">
+					<button type="button" class="nm_btn nm_btn-secondary nm_no-radius" data-dismiss="nm_modal">Fermer</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php
+
+	$i++;
+}
+	?>
+
+	<div class="nm_modal fade" id="phpinfo" tabindex="-1" role="dialog" aria-labelledby="examplenm_modalLabel" aria-hidden="true">
+		<div class="nm_modal-dialog nm_modal-lg" role="nm_document">
+			<div class="nm_modal-content nm_no-radius">
+				<div class="nm_modal-header nm_rouge nm_no-radius">
+					<h5 class="h5 nm_h5 nm_modal-title" id="examplenm_modalLabel">Coverage</h5>
+					<button type="button" class="nm_close" data-dismiss="nm_modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="nm_modal-body">
+					<div class="nm_container">
+						<iframe src="<?php echo WEBROOT . 'Tools/bin/tools/phpinfo.php'?>" style="width: 100%;" height="500"></iframe>
+					</div>
+				</div>
+				<div class="nm_modal-footer">
+					<button type="button" class="nm_btn nm_btn-secondary nm_no-radius" data-dismiss="nm_modal">Fermer</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <script type="text/javascript" src="<?php echo WEBROOT.'Tools/bin/tools/jquery-3.4.1.slim.min.js'; ?>"></script>
 <script type="text/javascript" src="<?php echo WEBROOT.'Tools/bin/tools/popper.min.js'; ?>"></script>
 <script type="text/javascript" src="<?php echo WEBROOT.'Tools/bin/tools/bootstrap.js'; ?>"></script>
+

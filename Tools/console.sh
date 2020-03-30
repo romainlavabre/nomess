@@ -11,7 +11,7 @@ dev-c()
     php -f bin/plugin/cli/prog/noMess/configLocal.php
 }
 
-dev-r()
+conf-r()
 {
     echo "Lancement du programme..."
     php -f bin/plugin/cli/prog/noMess/reinit.php
@@ -34,7 +34,8 @@ crud-c()
     echo "
     [dev -p] : Passer en mode developpement
     [dev -c] : Configurer le mode développement
-    [dev -r] : Réinialiser la configuration du mode développement
+
+    [conf -r] : Réinialiser la configuration
 
     [prod -p] : Passer en mode production
 

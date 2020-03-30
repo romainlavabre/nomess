@@ -5713,13 +5713,13 @@ a.nm_close.nm_disabled {
 @media (min-width: 992px) {
   .nm_modal-lg,
   .nm_modal-xl {
-    max-width: 800px;
+    max-width: 1200px;
   }
 }
 
 @media (min-width: 1200px) {
   .nm_modal-xl {
-    max-width: 1140px;
+    max-width: 1200px;
   }
 }
 

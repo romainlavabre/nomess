@@ -1,0 +1,4 @@
+AuthName "Api"
+AuthType Basic
+AuthUserFile "/var/www/html/noMess/.htpasswd"
+Require valid-user

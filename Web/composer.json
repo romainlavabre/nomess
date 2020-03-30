@@ -1,5 +1,5 @@
 {
-    "name": "lavabre/web",
+    "name": "NewWebSouth/web",
     "require": {
         "twig/twig": "^3.0"
     },

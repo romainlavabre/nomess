@@ -24,9 +24,6 @@ class WorkException extends \ErrorException{
 				$type = 'Erreur inconnue';
 				break;
 		}
-
-		global $CONTEXT;
-
 		
 		require ROOT . 'Tools/bin/tools/toolbar.php';
 		

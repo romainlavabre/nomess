@@ -1,29 +1,28 @@
 noMess
 
-version = 2.5.0
+version = 2.10.0
 Language = php
 version-language = 7.2
 require-version = 7.1
 
-Plugin:
-NewWeb-Admin 1.1.0
-NewWeb-Newsletter 1.1.1
-NewWeb-NoMess 1.1.0
-NewWeb-Content 1.1.0
-NewWeb-Stat 1.1.0
-NewWeb-Lib 1.1.0
+Other language:
+- bash
+- javascript
+- html
+- css
+
+
+Plugin/lib:
+Api NoMess 1.1.0
 Api DO-CRUD 2.0.0
-Stripe 3
-phpMailer 6.0.1
+Twig 3.0.0
+PHPUnit 8.5
+PHP-DI 6
+PHP-REF
 
-Front-end library:
-Wysihtml 5.0.0
-Bootstrap.4.4.1
 
-Back-end library:
-Form 1.0.1
 
-Compatibilté:
+Compatibility:
 
 linux, mac os
 Db service: Mysql
@@ -33,21 +32,27 @@ Changes:
 
 COMPARE noMess 2.5.0 ----------------------------
 
+add-> prod.sh
+add-> console.sh
+add-> BuildRoute
+add-> PHPUnit 8.5.0
+add-> PHP-REF
+add-> PHP-DI 6
+add-> Twig 3.0.0
 add-> Toolbar
 add-> lib -> form.1.0.1
 add-> lib -> bootstrap.4.4.1
 update-> tree
 update-> introduct namespace
-update-> NewWeb-Admin 1.1.0
-update-> NewWeb-Newsletter 1.1.1
-update-> NewWeb-Object 1.1.0
-update-> NewWeb-Crud 1.1.0
-update-> NewWeb-NoMess 1.1.1
-update-> NewWeb-Content 1.1.0
-update-> NewWeb-Stat 1.1.0
-update-> NewWeb-Lib 1.1.0
+delete-> NewWeb-Admin 1.1.0
+delete-> NewWeb-Newsletter 1.1.1
+delete-> NewWeb-Object 1.1.0
+delete-> NewWeb-Content 1.1.0
+delete-> NewWeb-Stat 1.1.0
+delete-> NewWeb-Lib 1.1.0
 refactor-> NewWeb-Crud 1.1.0 in API DO-CRUD 2.0.0
 refactor-> NewWeb-Object 1.1.0 in API DO-CRUD 2.0.0
+refactor-> 
 
 COMPARE noMess 2.0.0 ----------------------------
 

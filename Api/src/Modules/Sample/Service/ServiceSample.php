@@ -10,11 +10,11 @@ use NoMess\Core\ServiceManager;
 class ServiceSample extends ServiceManager{
 
 	public function treatment() {
-		$table = $this->getTable('Sample');
+		/*$table = $this->getTable('Sample');
 		$table->read();
 		$table->create();
 		$table->update();
-		$table->delete();
+		$table->delete();*/
 
 		return null;
 	}

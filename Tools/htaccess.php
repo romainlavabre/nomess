@@ -1,11 +1,11 @@
 <?php
 if(isset($_POST['login']) and isset($_POST['pass'])){
 	$login = $_POST['login'];
-	$pass_crypte = crypt($_POST['pass']); // On crypte le mot de passe
+	$pass_crypte = crypt($_POST['pass']);
 
 	echo '<p>Ligne à copier dans le .htpasswd :<br />' . $login . ':' . $pass_crypte . '</p>';
 	echo realpath("htaccess.php");
-}else // On n'a pas encore rempli le formulaire
+}else
 {
 	?>
 
