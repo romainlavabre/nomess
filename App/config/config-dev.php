@@ -1,9 +1,9 @@
 <?php
 // Data Base
 global $DataBase;
-$DataBase['host'] = 'db';
-$DataBase['dbname'] = 'noMess';
-$DataBase['user'] = 'root';
-$DataBase['password'] = 'root';
+$DataBase['host'] = 'hostVal';
+$DataBase['dbname'] = 'dbnameVal';
+$DataBase['user'] = 'userVal';
+$DataBase['password'] = 'passwordVal';
 
 $Log = 'App/var/log/log-dev.txt';
