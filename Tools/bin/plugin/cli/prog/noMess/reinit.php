@@ -3,7 +3,7 @@ require 'function-Installer.php';
 
 $comfirme = rdl("Êtes vous certain de vouloir réinitialiser la configuration ? [oui: o | non: Enter]: ");
 
-$api = '../Api/';
+$api = '../App/';
 if(!is_null($comfirme)){
 	$tabCopyFile = array(
 			'bin/plugin/cli/prog/noMess/file/config-dev.php' => $api . 'config/config-dev.php',

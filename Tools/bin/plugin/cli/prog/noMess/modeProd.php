@@ -7,7 +7,7 @@ require 'function-Installer.php';
 $comfirme = rdl("Plusieurs fichier vont être remplacé (index.php, WorkException.php, Response.php), continuer ? [oui: o | non: Enter]: ");
 
 
-$api = '../Api/';
+$api = '../App/';
 
 $tabConfig['hostVal'] = rdl("Adresse du serveur: ");
 $tabConfig['dbnameVal'] = rdl("Nom de la base: ");
@@ -36,6 +36,7 @@ if(@$file = file($api . "config/config-prod.php")){
 
 if(!is_null($comfirme)){
 	$tabCopyFile = array(
+			'bin/plugin/cli/prog/noMess/context/Request-prod.php' => $api . 'vendor/NoMess/Request.php',
 			'bin/plugin/cli/prog/noMess/context/Response-prod.php' => $api . 'vendor/NoMess/Response.php',
 			'bin/plugin/cli/prog/noMess/context/WorkException-prod.php' => $api . 'vendor/NoMess/WorkException.php',
 			'bin/plugin/cli/prog/noMess/context/index-prod.php' => '../index.php',

@@ -30,7 +30,7 @@ class Response implements SubjectInterface{
     }
     
     /**
-     * Formatte les donnée renvoyé par l'api
+     * Formatte les donnée renvoyé par l'App
      *
      * @param array $data
      * @return void
@@ -74,8 +74,6 @@ class Response implements SubjectInterface{
         foreach($data as $key => $value){
             if($key === 'stamp'){
                 $find = true;
-            }else if($key !== 'stamp' && $key !== 'attribut'){
-                throw new WorkException('La clé ' . $key . 'n\'est pas permise');
             }
         }
 

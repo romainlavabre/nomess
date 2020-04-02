@@ -3,13 +3,13 @@
 cache-d()
 {
     echo 'Suppression du cache php-di...'
-    sudo rm Api/var/cache/di/*
+    sudo rm App/var/cache/di/*
 }
 
 cache-r()
 {
     echo 'Suppression du cache routing...'
-    sudo rm Api/var/cache/routes/*
+    sudo rm App/var/cache/routes/*
 }
 
 

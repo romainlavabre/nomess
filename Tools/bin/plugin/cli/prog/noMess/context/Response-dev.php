@@ -30,7 +30,7 @@ class Response implements SubjectInterface{
     }
     
     /**
-     * Formatte les donnée renvoyé par l'api
+     * Formatte les donnée renvoyé par l'App
      *
      * @param array $data
      * @return void

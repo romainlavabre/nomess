@@ -2,9 +2,15 @@
 /*
  * @eclipse-formatter:off
  */
-    global $vController, $action, $method, $_GET, $_POST, $time, $tree;
-    $tabOpcache = opcache_get_configuration();
-	$tabStatus = opcache_get_status();
+	global $vController, $action, $method, $_GET, $_POST, $time, $tree;
+	
+	$tabOpcache = null;
+	$tabStatus = null;
+
+	try{
+		$tabOpcache = opcache_get_configuration();
+		$tabStatus = opcache_get_status();
+	}catch(Error $e){}
 
 	function controlDirectory(string $path, array $tab): bool {
 		foreach($tab as $value){
@@ -186,7 +192,7 @@
 	
 	<?php
             }?>
-	<?php if (ini_get_all('xdebug')['xdebug.remote_enable']['local_value'] === '1') {
+	<?php if (@ini_get_all('xdebug')['xdebug.remote_enable']['local_value'] === '1') {
                 ?>
 		<!--  --><div class="nm_btn-group nm_dropup">
 		<button type="button" class="nm_btn nm_vert nm_dropdown-toggle nm_no-radius" data-toggle="nm_dropdown" aria-haspopup="true" aria-expanded="false">
@@ -209,7 +215,7 @@
 	<?php
             } else {
                 ?>
-		<button class="nm_dropdown-item nm_nm_bleu-fonce nm_no-cursor">xDebug disable</button>
+		<button class="nm_btn nm_nm_bleu-fonce nm_no-cursor">xDebug disable</button>
 	<?php
             }?>
 	
@@ -250,7 +256,7 @@
 				Mods & Lib
 			</button>
 			<div class="nm_dropdown-menu">
-				<?php if (ini_get_all('xdebug')['xdebug.remote_enable']['local_value'] === '1') {
+				<?php if (@ini_get_all('xdebug')['xdebug.remote_enable']['local_value'] === '1') {
                 ?>
 					<button class="nm_btn nm_dropdown-item nm_vert nm_no-cursor">xDebug</button>
 				<?php
@@ -275,7 +281,7 @@
 			</div>
 		</div>
 		<button class="nm_btn nm_rouge" data-toggle="nm_modal" data-target="#phpinfo">phpinfo</button>
-		<button class="nm_btn nm_bleu nm_no-radius">noMess.2.10.0</button>
+		<button class="nm_btn nm_bleu nm_no-radius">noMess.2.10.2</button>
 	</div>
 </div>
 
@@ -425,7 +431,7 @@
 </div>
 <?php
                 }?>
-<?php if (ini_get_all('xdebug')['xdebug.remote_enable']['local_value'] === '1') {
+<?php if (@ini_get_all('xdebug')['xdebug.remote_enable']['local_value'] === '1') {
                     ?>
 <div class="nm_modal fade" id="xdebug" tabindex="-1" role="dialog" aria-labelledby="examplenm_modalLabel" aria-hidden="true">
 	<div class="nm_modal-dialog nm_modal-lg" role="nm_document">

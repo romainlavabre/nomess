@@ -4,10 +4,10 @@
     },
 	"autoload" : {
 		"psr-4" : {
-			"App\\Modules\\" : "../Api/src/Modules",
-			"App\\Tables\\" : "../Api/src/Tables",
-			"App\\Controllers\\" : "../Api/src/Controllers",
-			"NoMess\\Core\\" : "../Api/vendor/NoMess"
+			"App\\Modules\\" : "../App/src/Modules",
+			"App\\Tables\\" : "../App/src/Tables",
+			"App\\Controllers\\" : "../App/src/Controllers",
+			"NoMess\\Core\\" : "../App/vendor/NoMess"
 		}
 	}
 }

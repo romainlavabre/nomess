@@ -49,8 +49,8 @@ class ComposerStaticInit72029d1ede7ed044f8e19746a2c78783
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -66,7 +66,7 @@ class ComposerStaticInit72029d1ede7ed044f8e19746a2c78783
         ),
         'NoMess\\Core\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/../Api/vendor/NoMess',
+            0 => __DIR__ . '/../..' . '/../App/vendor/NoMess',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
@@ -78,15 +78,15 @@ class ComposerStaticInit72029d1ede7ed044f8e19746a2c78783
         ),
         'App\\Tables\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/../Api/src/Tables',
+            0 => __DIR__ . '/../..' . '/../App/src/Tables',
         ),
         'App\\Modules\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/../Api/src/Modules',
+            0 => __DIR__ . '/../..' . '/../App/src/Modules',
         ),
         'App\\Controllers\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/../Api/src/Controllers',
+            0 => __DIR__ . '/../..' . '/../App/src/Controllers',
         ),
     );
 

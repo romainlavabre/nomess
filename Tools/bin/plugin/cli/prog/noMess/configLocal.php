@@ -1,7 +1,7 @@
 <?php
 require 'function-Installer.php';
 
-$api = '../Api/config/';
+$api = '../App/config/';
 
 echo "Lancement de la configuration...\n";
 echo "Récupération des fichiers de configuration...\n";

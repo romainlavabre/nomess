@@ -1,5 +1,10 @@
 <?php
+
+/*
+	============================================================================
+*/
 declare(strict_types=1);
+
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 ini_set("log_errors", "1");
@@ -7,7 +12,11 @@ ini_set("log_errors", "1");
 define('WEBROOT', str_replace('index.php', '', $_SERVER['SCRIPT_NAME']));
 define('ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']));
 
-ini_set('error_log', ROOT .'Api/var/log/error.log');
+ini_set('error_log', ROOT .'App/var/log/error.log');
+
+/*
+	============================================================================
+*/
 
 if(isset($_POST['resetCache'])){
 	opcache_reset();
@@ -20,56 +29,44 @@ if(isset($_POST['invalide'])){
 }
 
 if(isset($_POST['resetCacheRoute'])){
-	unlink(ROOT . 'Api/var/cache/routes/routing.xml');
+	unlink(ROOT . 'App/var/cache/routes/routing.xml');
 	unset($_POST);
 }
 
-require (ROOT . 'Api/vendor/autoload.php');
-require (ROOT . 'Api/config/config-dev.php');
+require (ROOT . 'App/vendor/autoload.php');
+require (ROOT . 'App/config/config-dev.php');
 require (ROOT . 'Tools/bin/tools/time.php');
 
-global $vController, $action, $method, $time, $tree;
+/*
+===================================== Toolbar ==========================================
+*/
+global  $time, $tree;
 
 $time = new Time();
 $time->startController();
 
 $debut = microtime(true);
+/*
+===================================== Toolbar ==========================================
+*/
 
-if(!file_exists(ROOT . "Api/var/cache/routes/routing.xml")){
-	$buildRouting = new NoMess\Core\BuildRoutes(ROOT . "Api/var/cache/routes/routing.xml");
+
+
+if(!file_exists(ROOT . "App/var/cache/routes/routing.xml")){
+	$buildRouting = new NoMess\Core\BuildRoutes(ROOT . "App/var/cache/routes/routing.xml");
 	$buildRouting->build();
 }
 
-$builder = new DI\ContainerBuilder();
-$builder->useAnnotations(true);
-$builder->addDefinitions(ROOT . 'Api/config/di-definitions.php');
-$container = $builder->build();
-$controller = "";
-$action = "";
+$request = new NoMess\Core\Request();
+$tab = $request->getAction();
 
-$file = simplexml_load_file(ROOT . "Api/var/cache/routes/routing.xml");
+if(!is_null($tab)){
+	$vController = $tab[2];
+	$method = $tab[3];
 
-foreach($file->routes as $value){
-	if((string)$value->attributes()['url'] === $_GET['p']){
-		$controller = (string)$value->controller;
-		$vController = $controller;
-		
-		if(isset($_POST) && !empty($_POST)){
-			$action = (string)$value->post->attributes()['action'];
-			$method = "POST";
-		}else{
-			$action = (string)$value->get->attributes()['action'];
-			$method = "GET";
-		}
-		
-		break;
-	}
-} 
-
-if(file_exists(ROOT . "Api/src/Controllers/" . ucfirst($controller) . ".php")){	
-	$controller = $container->get("App\\Controllers\\" . ucfirst($controller));
-	$controller->$action();
+	$action = $tab[1];
 }
+
 
 require ROOT . 'Tools/bin/tools/toolbar.php';
 

@@ -1,0 +1,469 @@
+
+[01-Apr-2020 14:26:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND' in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#2 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#3 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#4 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#5 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#6 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 14:30:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND' in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#2 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#3 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#4 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#5 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#6 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 14:41:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined class constant 'MYSQL_ATTR_INIT_COMMAND' in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#2 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#3 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#4 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#5 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#6 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 14:43:18 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db:3...', 'root', 'Romain98', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 14:46:16 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;p...', 'root', 'Romain98', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 14:52:49 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;p...', 'root', 'Romain98', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 14:53:27 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or ser in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 15:00:55 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or ser in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 15:00:58 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or ser in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 15:07:59 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or ser in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 15:08:34 Europe/Berlin] PHP Parse error:  syntax error, unexpected ')' in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 11
+[01-Apr-2020 15:08:51 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:9
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(9): PDO->__construct('mysql:host=db;d...', 'root', '1529')
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or service not  in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 9
+[01-Apr-2020 15:50:15 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or ser in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 15:51:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or ser in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 15:51:41 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or ser in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 16:00:55 Europe/Berlin] PHP Notice:  Undefined variable: controller in /var/www/html/noMess/App/vendor/NoMess/Request.php on line 51
+[01-Apr-2020 16:00:55 Europe/Berlin] PHP Stack trace:
+[01-Apr-2020 16:00:55 Europe/Berlin] PHP   1. {main}() /var/www/html/noMess/index.php:0
+[01-Apr-2020 16:00:55 Europe/Berlin] PHP   2. NoMess\Core\Request->getAction() /var/www/html/noMess/index.php:61
+[01-Apr-2020 16:01:09 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or ser in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 16:23:45 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or ser in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 16:47:28 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.19.0.4' (using password: YES) in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 16:54:45 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=172....', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 16:56:13 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.19.0.4' (using password: YES) in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 16:56:22 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.19.0.4' (using password: YES) in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 16:56:23 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.19.0.4' (using password: YES) in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 16:56:23 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.19.0.4' (using password: YES) in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 17:37:12 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.19.0.4' (using password: YES) in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', 'root', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 17:37:23 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.19.0.4' (using password: YES) in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', 'Romain98', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 17:40:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.19.0.3' (using password: YES) in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', 'Romain98', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 17:56:30 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.19.0.4' (using password: YES) in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', 'Romain98', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 17:57:36 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.19.0.4' (using password: YES) in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '1529', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 17:58:07 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'172.19.0.4' (using password: YES) in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', 'root', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 18:03:01 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', 'root', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or ser in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 20:22:12 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1130] Host '172.18.0.4' is not allowed to connect to this MySQL server in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', 'root', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 20:23:06 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1130] Host '172.18.0.4' is not allowed to connect to this MySQL server in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 20:31:11 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1130] Host '172.18.0.4' is not allowed to connect to this MySQL server in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 20:32:58 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1130] Host '172.18.0.4' is not allowed to connect to this MySQL server in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 20:36:38 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1130] Host '172.18.0.4' is not allowed to connect to this MySQL server in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 20:36:39 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1130] Host '172.18.0.4' is not allowed to connect to this MySQL server in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 20:36:42 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1130] Host '172.18.0.4' is not allowed to connect to this MySQL server in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 21:12:14 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Connection refused in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', '', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 21:16:13 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1049] Unknown database 'noMess' in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', 'root', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 21:17:56 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1049] Unknown database 'noMess' in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', 'root', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[01-Apr-2020 21:49:07 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: PDO::__construct(): php_network_getaddresses: getaddrinfo failed: Name or service not known in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', 'root', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+
+Next PDOException: SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: Name or ser in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10
+[02-Apr-2020 13:30:14 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1049] Unknown database 'noMess' in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php:10
+Stack trace:
+#0 /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php(10): PDO->__construct('mysql:host=db;d...', 'root', 'root', Array)
+#1 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(48): NoMess\Core\PDOFactory::getMysqlConnection()
+#2 /var/www/html/noMess/App/vendor/NoMess/AppManager.php(13): NoMess\Core\AppManager->getDataBase()
+#3 /var/www/html/noMess/App/src/Modules/Sample/ServiceManagerSample.php(22): NoMess\Core\AppManager->getTable('Sample')
+#4 /var/www/html/noMess/App/src/Controllers/Welcome.php(46): App\Modules\Sample\ServiceManagerSample->sample()
+#5 /var/www/html/noMess/App/vendor/NoMess/Request.php(53): App\Controllers\Welcome->index()
+#6 /var/www/html/noMess/index.php(61): NoMess\Core\Request->getAction()
+#7 {main}
+  thrown in /var/www/html/noMess/App/vendor/NoMess/PDOFactory.php on line 10

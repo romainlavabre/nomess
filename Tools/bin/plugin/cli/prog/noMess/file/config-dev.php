@@ -6,4 +6,4 @@ $DataBase['dbname'] = 'dbnameVal';
 $DataBase['user'] = 'userVal';
 $DataBase['password'] = 'passwordVal';
 
-$Log = 'Api/var/log/log-dev.txt';
+$Log = 'App/var/log/log-dev.txt';

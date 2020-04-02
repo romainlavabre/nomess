@@ -13,28 +13,28 @@ class Main{
      *
      * @var string
      */
-    private $pathModule = '../Api/src/Modules/';
+    private $pathModule = '../App/src/Modules/';
 
     /**
      * Chamin vers le dossier des tables
      *
      * @var string
      */
-    private $pathTable = '../Api/src/Tables/';
+    private $pathTable = '../App/src/Tables/';
 
     /**
      * Dossier de config
      *
      * @var string
      */
-    private $pathConfigPdo = '../Api/config/config-dev.php';
+    private $pathConfigPdo = '../App/config/config-dev.php';
 
     /**
      * Chemin vers la classe PDOFactory
      *
      * @var string
      */
-    private $pathPdoFactory = '../Api/vendor/NoMess/PDOFactory.php';
+    private $pathPdoFactory = '../App/vendor/NoMess/PDOFactory.php';
 
     /**
      * Nom de la table en base

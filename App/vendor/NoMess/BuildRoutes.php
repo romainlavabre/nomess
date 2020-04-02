@@ -49,12 +49,12 @@ class BuildRoutes{
 
     private function reflector() : void
     {
-        $tabContent = scandir('Api/src/Controllers');
+        $tabContent = scandir('App/src/Controllers');
 
         foreach($tabContent as $value){
             
-            if(@is_file('Api/src/Controllers/' . $value)){
-                $className = $this->getClassName('Api/src/Controllers/' . $value);
+            if(@is_file('App/src/Controllers/' . $value)){
+                $className = $this->getClassName('App/src/Controllers/' . $value);
 
                 $refle = new \ReflectionClass("App\\Controllers\\" . $className);
 

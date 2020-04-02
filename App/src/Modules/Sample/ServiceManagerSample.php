@@ -19,11 +19,11 @@ class ServiceManagerSample extends ServiceGrantManager
 	public function sample() 
 	{
 		$data = $this->serviceSample->treatment();
-		/*$table = $this->getTable('Sample');
+		$table = $this->getTable('Sample');
 		$table->read();
 		$table->create($data);
 		$table->update($data);
-		$table->delete($data);*/
+		$table->delete($data);
 
 		return 'data';
 	}

@@ -20,7 +20,7 @@ class RegisterObject{
             echo "Lancement du mode sans echec...\n";
             sleep(1);
 
-            if(!@file_put_contents('../Api/var/mse/installer/' . $name . ".php", $content)){
+            if(!@file_put_contents('../App/var/mse/installer/' . $name . ".php", $content)){
                 echo "Echec: Le mode sans echec n'a pas pu enregistrer l'entité\n";
                 echo "Copier/Coller l'entité: \n";
                 echo $content;

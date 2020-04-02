@@ -9,7 +9,7 @@ class PDOFactory{
 		$db = new \PDO('mysql:host=' . $DataBase['host'] . ';dbname=' . $DataBase['dbname'] . '', $DataBase['user'], $DataBase['password'], array(
 				\PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
 		));
-		$db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+	$db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 
 		return $db;
 	}
