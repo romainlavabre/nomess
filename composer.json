@@ -1,0 +1,20 @@
+{
+    "name": "nomess/nomess",
+    "require": {
+        "nomess/kernel": "^2.15.0"
+    },
+    "authors": [
+        {
+            "name": "Lavabre Romain",
+            "email": "webmaster@newwebsouth.fr"
+        }
+    ],
+    "autoload" : {
+		"psr-4" : {
+            "App\\Modules\\" : "App/src/Modules/",
+			"App\\Tables\\" : "App/src/Tables/",
+			"App\\Controllers\\" : "App/src/Controllers/"
+            
+		}
+    }
+}

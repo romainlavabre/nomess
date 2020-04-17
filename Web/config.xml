@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
-<config>
-    <!-- Template depuis Web/public/ -->
-    <template stamp="welcome:index" tt="standard/welcome.twig"/>
-</config>

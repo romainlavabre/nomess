@@ -1,25 +1,9 @@
 noMess
 
-version = 2.10.1
+version = 2.15.0
 Language = php
-version-language = 7.2
-require-version = 7.1
-
-Other language:
-- bash
-- javascript
-- html
-- css
-
-
-Plugin/lib:
-Api NoMess 1.1.0
-Api DO-CRUD 2.0.0
-Twig 3.0.0
-PHPUnit 8.5
-PHP-DI 6
-PHP-REF
-
+version-language = 7.3
+require-version = 7.3
 
 
 Compatibility:
@@ -29,6 +13,12 @@ Db service: Mysql
 
 
 Changes:
+
+COMPARE noMess 2.10.2
+
+Full Rewrite
+
+
 
 COMPARE noMess 2.10.0 && 2.10.1----------------------------
 
