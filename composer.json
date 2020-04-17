@@ -1,5 +1,6 @@
 {
     "name": "nomess/nomess",
+    "type": "project",
     "require": {
         "nomess/kernel": "^2.15.0"
     },
