@@ -17,5 +17,6 @@
 			"App\\Controllers\\" : "App/src/Controllers/"
             
 		}
-    }
+    },
+    "minimum-stability": "stable"
 }
