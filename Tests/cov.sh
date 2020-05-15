@@ -1,15 +1,16 @@
 #!/bin/bash
 
-echo 'Requier phpcov'
+echo 'Requiere phpcov'
 
 
-read -p 'Saisissez le dossier rassamblant les rapports (depuis Tests/...): ' dirReport
+if [ -f $dirReport/fullTest.cov ]
+then
+    rm $dirReport/fullTest.cov 
+fi
 
-rm reports/fullTest.cov 
+../vendor/bin/phpunit Modules --coverage-php reports/fullTest.cov
 
-vendor/bin/phpunit $dirReport --coverage-php reports/fullTest.cov
-
-vendor/bin/phpcov merge --html reports/FullTest reports/
+../vendor/bin/phpcov merge --html reports/FullTest reports/
 
 echo 'Retrouvez votre rapport dans reports/FullTest/index.html ou dans la toolbar -> phpunit'
 

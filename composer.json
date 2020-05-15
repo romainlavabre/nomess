@@ -1,7 +1,7 @@
 {
     "name": "nomess/nomess",
     "require": {
-        "nomess/kernel": "^2.15.0"
+        "nomess/kernel": "^2.16.0"
     },
     "authors": [
         {
@@ -13,8 +13,8 @@
 		"psr-4" : {
             "App\\Modules\\" : "App/src/Modules/",
 			"App\\Tables\\" : "App/src/Tables/",
-			"App\\Controllers\\" : "App/src/Controllers/"
-            
+            "App\\Controllers\\" : "App/src/Controllers/",
+            "Tests\\": "Tests/Modules/"            
 		}
     }
 }

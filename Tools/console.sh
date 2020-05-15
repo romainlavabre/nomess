@@ -206,7 +206,7 @@ listen()
     done
 }
 
-echo "NoMess version 2.15.0
+echo "NoMess version 2.16.0
 
 Bienvenue sur noMess"
 
