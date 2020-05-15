@@ -20,6 +20,7 @@ ini_set('error_log', ROOT .'App/var/log/error.log');
 
 require (ROOT . 'vendor/autoload.php');
 require (ROOT . 'vendor/nomess/kernel/Tools/tools/time.php');
+require (ROOT . 'vendor/nomess/kernel/Exception/WorkException.php');
 
 /*
 ===================================== Toolbar ==========================================
