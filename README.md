@@ -1,6 +1,5 @@
 # Général
 
-234
 NoMess est compatible avec Linux et Mac Os uniquement
 
 Installation
