@@ -5,18 +5,30 @@ return [
 
 
     /**
-     *  Create your dynamic rewrite rule during execution program
+     * Let an manager take care your peristence class, your only job is of optimize your SQL request
      */
-    NoMess\Component\RuntimeRewriteUrl\RewriteRule::class       => false,
+    \NoMess\Component\PersistsManager\PersistsManager::class     => false,
 
     /**
-     * Have light peristence for customer
+     * Let an manager take care your data
      */
-    NoMess\Component\LightPersists\LightPersists::class         => false,
+    \NoMess\Component\DataManager\Database::class                => false,
 
     /**
-     * Use Worker for async task
+     * Dynamically create your rewrite rules during program execution
      */
-    NoMess\Component\Worker\InteractiveRuntimeWorker::class     => false
+    \NoMess\Component\RuntimeRewriteUrl\RewriteRule::class       => false,
+
+    /**
+     * Use a light persistence container
+     */
+    \NoMess\Component\LightPersists\LightPersists::class         => false,
+
+    /**
+     * Use a worker for asynchronous tasks
+     */
+    \NoMess\Component\Worker\InteractiveRuntimeWorker::class     => false
+
+
 
 ];
