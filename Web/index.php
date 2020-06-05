@@ -8,8 +8,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 ini_set("log_errors", "1");
 
-define('WEBROOT', str_replace('index.php', '', $_SERVER['SCRIPT_NAME']));
-define('ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']));
+define('ROOT', str_replace('Web/index.php', '', $_SERVER['SCRIPT_FILENAME']));
+define('WEBROOT', 'public/');
+define('NOMESS_CONTEXT', 'DEV');
 
 ini_set('error_log', ROOT .'App/var/log/error.log');
 
@@ -19,6 +20,7 @@ ini_set('error_log', ROOT .'App/var/log/error.log');
 
 
 require (ROOT . 'vendor/autoload.php');
+require (ROOT . 'vendor/nomess/kernel/Exception/WorkException.php');
 require (ROOT . 'vendor/nomess/kernel/Tools/tools/time.php');
 
 /*
@@ -33,16 +35,7 @@ $time = new Time();
 
 
 $route = new NoMess\Router\Router();
-$tab = $route->getRoute();
+$route->getRoute();
 
-if(!is_null($tab)){
-	$vController = $tab[2];
-	$method = $tab[3];
-
-	$action = $tab[1];
-}
-
-
-require ROOT . 'vendor/nomess/kernel/Tools/tools/toolbar.php';
 
 ?>
