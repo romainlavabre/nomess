@@ -5,7 +5,7 @@ return [
 
 
     /**
-     * Let an manager take care your peristence class, your only job is of optimize your SQL request
+     * Let an manager take care your persistence class, your only job is of optimize your SQL request
      */
     \NoMess\Components\PersistsManager\PersistsManager::class     => false,
 
@@ -13,6 +13,11 @@ return [
      * Let an manager take care your data
      */
     \NoMess\Components\DataManager\Database::class                => false,
+
+    /**
+     * Use the form builder component (beta version)
+     */
+    \NoMess\Components\Forms\AbstractFormBuilder::class           => false,
 
     /**
      * Dynamically create your rewrite rules during program execution
