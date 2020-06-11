@@ -55,9 +55,18 @@ ___
 
 > Precise that the property it's an dependency (other entity)
 
+`@PM\Dependency(Full\Name\Of\Dependency)`
+
+> if you cannot explicitly specify the dependency type, use that
+
 `@PM\Patch\ ~`
 
 > You will guide by PersistsManager
+
+`PM\Extends(property_name,column_name)`
+
+> In case of heritage and if column is not identical, specify it in class comments
+
 
 <br>
 
