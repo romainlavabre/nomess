@@ -20,11 +20,6 @@ return [
     \NoMess\Components\Forms\AbstractFormBuilder::class           => false,
 
     /**
-     * Dynamically create your rewrite rules during program execution
-     */
-    \NoMess\Components\RuntimeRewriteUrl\RewriteRule::class       => false,
-
-    /**
      * Use a light persistence container
      */
     \NoMess\Components\LightPersists\LightPersists::class         => false,
@@ -32,7 +27,12 @@ return [
     /**
      * Use a worker for asynchronous tasks
      */
-    \NoMess\Components\Worker\InteractiveRuntimeWorker::class     => false
+    \NoMess\Components\Worker\InteractiveRuntimeWorker::class     => false,
+
+    /**
+     * Modify your configuration by source code
+     */
+    \NoMess\Components\Config\InteractConfig::class               => false
 
 
 

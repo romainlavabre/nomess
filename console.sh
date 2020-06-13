@@ -82,22 +82,16 @@ prod-p()
 
 }
 
-crud-c()
-{
-    echo "Launch..."
-    php -f vendor/nomess/kernel/Tools/plugin/cli/do-crud.php
-}
-
 controller-c()
 {
     echo "Launch..."
-    php -f vendor/nomess/kernel/Tools/plugin/cli/do-controller.php
+    php -f vendor/nomess/kernel/Tools/Console/do-controller.php
 }
 
 form-c()
 {
     echo "Launch..."
-    php -f vendor/nomess/kernel/Tools/plugin/cli/do-form.php
+    php -f vendor/nomess/kernel/Tools/Console/do-form.php
 }
 
 cache-r()
@@ -137,6 +131,12 @@ cache-f()
     sudo rm Web/public/inc/forms/*
 }
 
+cache-o()
+{
+    echo 'Remove cache of opcache'
+    sudo php -f vendor/nomess/kernel/Tools/Console/opcache.php
+}
+
 cache--all()
 {
     echo 'Remove cache of routing...'
@@ -156,6 +156,9 @@ cache--all()
 
     echo 'Remove cache of environment'
     sudo rm App/var/cache/env/*
+
+    echo 'Remove cache of opcache'
+    sudo php -f vendor/nomess/kernel/Tools/Console/opcache.php
 
 }
 
@@ -198,9 +201,10 @@ error-p()
     |   [cache -r]      : Purge cache of routing             |          |   [log -r]     : Read the logs of nomess               |
     |   [cache -t]      : Purge cache of twig                |          |   [error -r]   : Read the errors of apache             |
     |   [cache -p]      : Purge cache of PersistsManager     |          |   [log -p]     : Purge the logs of nomess              |
-    |   [cache -m]      : Purge cache of dataManager         |          |   [log -p]     : Purge the errors of apache            |
+    |   [cache -m]      : Purge cache of dataManager         |          |   [error -p]     : Purge the errors of apache          |
     |   [cache -f]      : Purge cache of forms               |          |________________________________________________________|
     |   [cache -e]      : Purge cache of environment         |
+    |   [cache -o]      : Purge cache of opcache             |
     |   [cache --all]   : Purge all cache file               |
     |________________________________________________________|
 

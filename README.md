@@ -72,7 +72,9 @@ ___
 ###### Header
 
 Affix `@Route(sample/route)` annotations for define route 
-and `@Auth(sample_session_user)` for control the access
+and `@Filter(sample_filter_name)` for control the access
+
+You can specify many routes or filters annotations
 
 ###### Methods:
 
@@ -126,6 +128,12 @@ will be executed
 *`sendData(): ?array`* 
  
 > Send data provided by forward method, useful coupled to json format 
+
+<br>
+
+*`bindForm(array $form): Distributor`*
+
+> Bind one, or many form
 
 <br>
  
@@ -234,9 +242,9 @@ Manage your components in
 
 [LightPersists](Doc/LightPersists.md)
 
-[RuntimeRewriteUrl](Doc/RuntimeRewriteUrl.md)
+[Slug](Doc/Slug.md)
 
-
+[ApplicationScope](Doc/ApplicationScope.md)
 
 
  
