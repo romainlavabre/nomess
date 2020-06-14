@@ -32,7 +32,12 @@ return [
     /**
      * Modify your configuration by source code
      */
-    \NoMess\Components\Config\InteractConfig::class               => false
+    \NoMess\Components\Config\InteractConfig::class               => false,
+
+    /**
+     * Use an variable with scope application
+     */
+    \NoMess\Components\ApplicationScope\ApplicationScope::class   => false
 
 
 
