@@ -36,7 +36,3 @@ $time = new Time();
 
 
 $route = new NoMess\Router\Router();
-$route->getRoute();
-
-
-?>
