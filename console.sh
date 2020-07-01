@@ -2,36 +2,10 @@
 dev-p()
 {
     echo "Launch..."
-    php -f vendor/nomess/kernel/Tools/plugin/cli/prog/noMess/modeDev.php
-
-
-
-    echo "Configure identifiants access to database ? [O/N]"
-
-    read -p "webmaster$ " response
-
-    if [ $response = 'O' ]
-    then 
-        sudo nano App/config/database.php
-    fi
-
-    unset $response
-
-
-    echo "Configure the DataCenter ? [O/N]"
-
-    read -p "webmaster$ " response
-
-    if [ $response = 'O' ]
-    then 
-        sudo nano App/config/datacenter.php
-    fi
-
+    php -f vendor/nomess/kernel/Tools/Console/noMess/modeDev.php
 
     echo "
     Mod development enabled
-    
-
     "
 }
 
@@ -39,7 +13,7 @@ dev-p()
 prod-p()
 {
 
-    php -f vendor/nomess/kernel/Tools/plugin/cli/prog/noMess/modeProd.php
+    php -f vendor/nomess/kernel/Tools/Console/noMess/modeProd.php
 
     echo "Do you want purge all cache ? ? (Recommended) [O/N]"
 
@@ -49,32 +23,6 @@ prod-p()
     then
         cache--all
     fi
-
-    unset $response
-
-
-
-    echo "Configure identifiants access to database ? [O/N]"
-
-    read -p "webmaster$ " response
-
-    if [ $response = 'O' ]
-    then 
-        sudo nano App/config/database.php
-    fi
-
-    unset $response
-    
-
-    echo "Configure your DataCenter ? [O/N]"
-
-    read -p "webmaster$ " response
-
-    if [ $response = 'O' ]
-    then 
-        sudo nano App/config/datacenter.php
-    fi
-
 
     echo "
     Mod production enabled
@@ -88,22 +36,22 @@ controller-c()
     php -f vendor/nomess/kernel/Tools/Console/do-controller.php
 }
 
-form-c()
+filter-c()
 {
     echo "Launch..."
-    php -f vendor/nomess/kernel/Tools/Console/do-form.php
+    php -f vendor/nomess/kernel/Tools/Console/do-filter.php
 }
 
 cache-r()
 {
     echo 'Remove cache of routing...'
-    sudo rm App/var/cache/routes/*
+    sudo rm var/cache/routes/*
 }
 
 cache-m()
 {
     echo 'Remove cache of DataManager...'
-    sudo rm App/var/cache/mondata.xml
+    sudo rm var/cache/mondata.xml
 }
 
 
@@ -116,19 +64,13 @@ cache-t()
 cache-p()
 {
   echo 'Remove cache of PersistsManager'
-  sudo rm App/var/cache/pm/*
-}
-
-cache-e()
-{
-  echo 'Remove cache of PersistsManager'
-  sudo rm App/var/cache/env/*
+  sudo rm var/cache/pm/*
 }
 
 cache-f()
 {
-    echo 'Remove cache of form'
-    sudo rm Web/public/inc/forms/*
+    echo 'Remove cache of filters'
+    sudo rm var/cache/filters/*
 }
 
 cache-o()
@@ -140,46 +82,36 @@ cache-o()
 cache--all()
 {
     echo 'Remove cache of routing...'
-    sudo rm App/var/cache/routes/*
+    sudo rm var/cache/routes/*
 
     echo 'Remove cache of DataManager...'
-    sudo rm App/var/cache/dm/datamanager.xml
+    sudo rm var/cache/dm/datamanager.xml
 
     echo 'Remove cache of twig...'
     sudo rm -rf Web/cache/twig/*
 
     echo 'Remove cache of PersistsManager'
-    sudo rm App/var/cache/pm/*
+    sudo rm var/cache/pm/*
 
-    echo 'Remove cache of form'
-    sudo rm Web/public/inc/forms/*
+    echo 'Remove cache of EntityManager'
+    sudo rm var/cache/em/*
 
-    echo 'Remove cache of environment'
-    sudo rm App/var/cache/env/*
+    echo 'Remove cache of Filters'
+    sudo rm var/cache/filters/*
 
     echo 'Remove cache of opcache'
     sudo php -f vendor/nomess/kernel/Tools/Console/opcache.php
 
 }
 
-log-r()
-{
-    cat App/var/log/log.txt
-}
-
 error-r()
 {
-    cat App/var/log/error.log
-}
-
-log-p()
-{
-    truncate -s 0 App/var/log/log.txt
+    cat var/log/error.log
 }
 
 error-p()
 {
-    truncate -s 0 App/var/log/error.log
+    sudo truncate -s 0 var/log/error.log
 }
 
 
@@ -191,19 +123,18 @@ error-p()
     |                       CONTEXT                          |          |                       GENERATOR                        |
     |________________________________________________________|          |________________________________________________________|
     |   [dev -p]    : Pass in development mod                |          |   [controller -c] : Generate one or many controller    |
-    |   [prod -p]   : Pass in production mod                 |          |   [form -c]       : Generate an form building class    |
+    |   [prod -p]   : Pass in production mod                 |          |   [filter -c]     : Generate an filter class           |
     |________________________________________________________|          |________________________________________________________|
 
 
      ________________________________________________________            ________________________________________________________
     |                        CACHE                           |          |                         CONSULT                        |
     |________________________________________________________|          |________________________________________________________|
-    |   [cache -r]      : Purge cache of routing             |          |   [log -r]     : Read the logs of nomess               |
-    |   [cache -t]      : Purge cache of twig                |          |   [error -r]   : Read the errors of apache             |
-    |   [cache -p]      : Purge cache of PersistsManager     |          |   [log -p]     : Purge the logs of nomess              |
-    |   [cache -m]      : Purge cache of dataManager         |          |   [error -p]     : Purge the errors of apache          |
-    |   [cache -f]      : Purge cache of forms               |          |________________________________________________________|
-    |   [cache -e]      : Purge cache of environment         |
+    |   [cache -r]      : Purge cache of routing             |          |   [error -r]   : Read the errors of apache             |
+    |   [cache -t]      : Purge cache of twig                |          |   [error -p]   : Purge the errors of apache            |
+    |   [cache -p]      : Purge cache of PersistsManager     |          |________________________________________________________|
+    |   [cache -m]      : Purge cache of dataManager         |
+    |   [cache -f]      : Purge cache of filters             |
     |   [cache -o]      : Purge cache of opcache             |
     |   [cache --all]   : Purge all cache file               |
     |________________________________________________________|
@@ -245,7 +176,7 @@ echo -e "
      ________________________________________________________________
     |      HELLO !!! I'AM NOMESS, I LIKE HELP YOU FOR DEVELOPMENT    |
     |             _____________________________________              |
-    |                     I have 2.17 years old                      |
+    |                     I have 2.20 years old                      |
     |                                                                |
     |            USE [ -- help ] DO THAT TO SEE MY ABILITIES         |
     |________________________________________________________________|

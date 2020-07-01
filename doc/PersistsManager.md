@@ -13,7 +13,7 @@ ___
 
 #### Configurations
 
-> App/config/component/PersistsManager.pgp
+> config/components/PersistsManager.php
 
 <br>
 

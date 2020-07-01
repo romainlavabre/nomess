@@ -232,19 +232,19 @@ Manage your components in
 
 > App/config/component.php
 
-[Container](Doc/Container.md)
+[Container](doc/Container.md)
 
-[DataManager](Doc/DataManager.md)
+[EntityManager](doc/EntityManager.md)
 
-[PersistsManager](Doc/PersistsManager.md)
+[DataManager](doc/DataManager.md)
 
-[HttpSession](Doc/HttpSession.md)
+[PersistsManager](doc/PersistsManager.md)
 
-[LightPersists](Doc/LightPersists.md)
+[HttpSession](doc/HttpSession.md)
 
-[Slug](Doc/Slug.md)
+[LightPersists](doc/LightPersists.md)
 
-[ApplicationScope](Doc/ApplicationScope.md)
+[ApplicationScope](doc/ApplicationScope.md)
 
 
  
