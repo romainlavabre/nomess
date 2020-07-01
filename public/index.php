@@ -12,6 +12,6 @@ ini_set('error_log', ROOT .'var/log/error.log');
 
 
 require (ROOT . 'vendor/autoload.php');
-require (ROOT . '.kernel/Exception/NomessException.php');
+require (ROOT . 'vendor/nomess/kernel/Exception/NomessException.php');
 
 return (new Nomess\Initiator\Initiator())->initializer();

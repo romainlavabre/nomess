@@ -3,8 +3,8 @@
 return [
     'default' => [
         'server' => 'server',
-        'port' => 'server_port',
-        'host' => 'host',
+        'port' => '3306',
+        'host' => 'localhost',
         'dbname' => 'name_to_database',
         'user' => 'username',
         'password' => 'user_password'

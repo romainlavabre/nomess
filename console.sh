@@ -42,6 +42,12 @@ filter-c()
     php -f vendor/nomess/kernel/Tools/Console/do-filter.php
 }
 
+cache-a()
+{
+    echo 'Remove data of application scope...'
+    sudo rm var/cache/as/*
+}
+
 cache-r()
 {
     echo 'Remove cache of routing...'
@@ -81,6 +87,7 @@ cache-o()
 
 cache--all()
 {
+    echo 'Data of application scope ignored'
     echo 'Remove cache of routing...'
     sudo rm var/cache/routes/*
 
@@ -136,6 +143,7 @@ error-p()
     |   [cache -m]      : Purge cache of dataManager         |
     |   [cache -f]      : Purge cache of filters             |
     |   [cache -o]      : Purge cache of opcache             |
+    |   [cache -a]      : Purge data of application scope    |
     |   [cache --all]   : Purge all cache file               |
     |________________________________________________________|
 
