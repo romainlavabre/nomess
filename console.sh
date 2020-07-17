@@ -85,6 +85,12 @@ cache-o()
     sudo php -f vendor/nomess/kernel/Tools/Console/opcache.php
 }
 
+cache-e()
+{
+    echo 'Remove cache of entities'
+    sudo rm var/cache/ce/*
+}
+
 cache--all()
 {
     echo 'Data of application scope ignored'
@@ -102,6 +108,9 @@ cache--all()
 
     echo 'Remove cache of EntityManager'
     sudo rm var/cache/em/*
+
+    echo 'Remove cache of entities'
+    sudo rm var/cache/ce/*
 
     echo 'Remove cache of Filters'
     sudo rm var/cache/filters/*
@@ -143,6 +152,7 @@ error-p()
     |   [cache -m]      : Purge cache of dataManager         |
     |   [cache -f]      : Purge cache of filters             |
     |   [cache -o]      : Purge cache of opcache             |
+    |   [cache -e]      : Purge cache of entities            |
     |   [cache -a]      : Purge data of application scope    |
     |   [cache --all]   : Purge all cache file               |
     |________________________________________________________|

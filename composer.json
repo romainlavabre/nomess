@@ -2,7 +2,7 @@
     "name": "nomess/nomess",
     "type": "project",
     "require": {
-        "nomess/kernel": "^2.20.1"
+        "nomess/kernel": "^2.20.2"
     },
     "authors": [
         {
@@ -10,10 +10,10 @@
             "email": "webmaster@newwebsouth.fr"
         }
     ],
-    "autoload" : {
-		"psr-4" : {
-            "App\\" : "src/",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
             "Tests\\": "tests/Modules/"
-		}
+        }
     }
 }
