@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'life_time' => 60 * 60 * 24,
+    'enable' => FALSE,
+    'life_time' => 60 * 60 * 6
 ];
