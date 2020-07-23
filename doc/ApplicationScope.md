@@ -4,9 +4,13 @@ No specific explication for this component, it's an variable with application sc
 
 Use 
 
+`has(string $index): bool`
+
+> For know if the component contains this key
+
 `get(string $index)`
 
-> For get the value associate to the index
+> For take the value associate to the index
 
 
 `set(string $index, mixed $value, bool $reset = false)`

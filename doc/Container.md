@@ -7,7 +7,7 @@ The dependency injection container is integrated by default in nomess and works 
 <br>
 
 `@Inject` Annotation can be used for all methods and properties 
-of your class, but she's optional for constructor.
+of your class, but she's optional for the constructors and controller's method.
 
 
 

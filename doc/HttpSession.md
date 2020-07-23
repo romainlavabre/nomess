@@ -5,6 +5,10 @@ The HttpSession manager your session (security in particular)
 
 #### Method
 
+*`has(mixed $index): bool`*
+
+> Return true if the index exists, else false
+
 *`&getReference(mixed $index): mixed`*
 
 > Return reference of the entry accociate to index, NULL if doesn't exists
