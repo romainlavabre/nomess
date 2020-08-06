@@ -1,7 +1,8 @@
 <?php
-/*
- *
- * Add your tiw extension here
+/*   _______________________________
+    |                               |
+    | Add your twig extension here  |
+    |_______________________________|
  */
 return [
 
