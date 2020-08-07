@@ -64,7 +64,7 @@ cache-m()
 cache-t()
 {
     echo 'Remove cache of twig...'
-    sudo rm -rf Web/cache/twig/*
+    sudo rm -rf var/cache/twig/*
 }
 
 cache-p()
@@ -101,7 +101,7 @@ cache--all()
     sudo rm var/cache/dm/datamanager.xml
 
     echo 'Remove cache of twig...'
-    sudo rm -rf Web/cache/twig/*
+    sudo rm -rf var/cache/twig/*
 
     echo 'Remove cache of PersistsManager'
     sudo rm var/cache/pm/*
