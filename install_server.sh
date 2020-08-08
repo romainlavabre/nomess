@@ -5,18 +5,26 @@
 #Controle la présence de paramètre | exit si erreur
 if [ -z $1 ];
 then
-    echo 'Veuillez spécifier le mot de passe de root';
+    echo 'Veuillez spécifier le mot de passe de root (mysql)';
     exit
 fi
 
 
 #Installation d'apache2 + modrewrite
-sudo apt-get apache2
+echo "Installation of apache2"
+sudo apt-get install apache2
 sudo a2enmod rewrite
 systemctl restart apache2
 
 #Installation de php + modapache
-sudo apt-get install php libapache2-mod-php php-mysql php-xml php-mailparse
+echo "Installation of php and dependencies"
+sudo apt-get install php libapache2-mod-php php-mysql php-xml php-mailparse php-xdebug
+
+echo "Active xdebug..."
+sudo phpenmod php-xdebug
+
+echo "Restart apache2..."
+sudo systemctl restart apache2
 
 
 #Configuration de base de mysql
