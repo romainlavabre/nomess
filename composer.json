@@ -2,7 +2,7 @@
     "name": "nomess/nomess",
     "type": "project",
     "require": {
-        "nomess/kernel": "^2.20.5"
+        "nomess/kernel": "^2.20.6"
     },
     "authors": [
         {

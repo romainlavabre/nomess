@@ -1,0 +1,9 @@
+[2.20.6]
+# Changed
+- PathExtension: In production mode, the path extension return '#' in place of exception
+- Helpers: The method of helpers changed to protected scope
+
+# Fixed
+- EntityCache: The exception thrown during the notification of the services subscribed to the transaction
+does not prevent the erroneous entities from being cached.
+
