@@ -1,3 +1,16 @@
+[2.25.1]
+# Added
+- Exception type in report
+
+# Changed
+- Report of exception, return the type and show parameters sent
+- The entity cache injects an empty array if the value is null
+
+# Fixed
+- HttpRequest::getParameter returned an not empty array while array was empty
+- The script sh doesn't work with new phpunit version
+
+________________________________________________________________________________________________________
 [2.20.6]
 # Changed
 - PathExtension: In production mode, the path extension return '#' in place of exception

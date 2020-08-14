@@ -26,6 +26,18 @@ Methodes of entity manager:
 
 `delete(object : object)`
 
+`register()`
+
+###Relations
+
+`@OneToMany`
+
+`@ManyToOne`
+
+`@ManyToMany`
+
+`@OneToOne` + `@Owner | @MappedBy("property_name")` 
+
 
 ###Cache
 An cache of entities is available in nomess, you can enable it in:
@@ -38,8 +50,8 @@ An cache of entities is available in nomess, you can enable it in:
 
 And add your entity to cache:
 
-`Name\Of\Entity\1::class => true,`<br>
-`Name\Of\Entity\2::class => true,`
+`Name\Of\Entity\1::class,`<br>
+`Name\Of\Entity\2::class,`
 
 For purged cache:
 
