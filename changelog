@@ -1,3 +1,9 @@
+[2.25.2]
+# Fixed
+- Error 500 when a parameter of route is void
+- Value NULL is not injected in entity by ORM
+- When EntityManager have crash, the success message could be added
+
 [2.25.1]
 # Added
 - Exception type in report
