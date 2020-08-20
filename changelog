@@ -1,8 +1,13 @@
+[2.25.3]
+# Changed
+- Abstract resolver test with "if" ans not try/catch
+
 [2.25.2]
 # Fixed
 - Error 500 when a parameter of route is void
 - Value NULL is not injected in entity by ORM
 - When EntityManager have crash, the success message could be added
+- Error with namespace of lightpersists and application scope
 
 [2.25.1]
 # Added
