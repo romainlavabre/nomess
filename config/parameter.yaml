@@ -1,0 +1,3 @@
+# Your parameters is accessibly by ParameterInterface
+
+orm_error: "Une erreur s'est produite"

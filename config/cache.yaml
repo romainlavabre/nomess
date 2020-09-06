@@ -1,0 +1,49 @@
+cache:
+    routes:
+        # auto | true | false
+        # auto: enable when nomess is in production context, else, disable
+        enable: auto
+        # path: routes/
+        parameters:
+            value: [type: array, constraint: NOT_NULL]
+            filename: [default: routes_match]
+        revalidation_rules: []
+        removed_by_cli: true
+        return: array
+
+    container:
+        enable: auto
+        parameters:
+            value: [type: array, constraint: NOT_EMPTY]
+            filename: [default: container]
+        revalidation_rules: []
+        removed_by_cli: true
+        return: array
+
+    filters:
+        enable: auto
+        parameters:
+            value: [type: array]
+            filename: [default: filters_match]
+        revalidation_rules: []
+        removed_by_cli: true
+        return: array
+
+
+rules:
+    # You can add your rule
+    revalidation:
+        # Implement Nomess\Component\Rule\Revalidation\RuleHandlerInterface
+        # SAMPLE: 'App\Component\Cache\Sample'
+
+    constraint:
+        NOT_EMPTY:
+            function: 'empty'
+            expected: false
+        NOT_NULL:
+            function: 'is_null'
+            expected: false
+
+
+
+

@@ -1,0 +1,23 @@
+___
+# Map your services here
+services:
+    framework: # Internal mapping, do not alter it
+        Nomess\Component\Orm\EntityManagerInterface: Nomess\Component\Orm\EntityManager
+        Nomess\Container\ContainerInterface: Nomess\Container\Container
+        Nomess\Component\Orm\Driver\DriverHandlerInterface: Nomess\Component\Orm\Driver\Pdo\PdoDriver
+        Nomess\Component\Orm\QueryWriter\QueryCreateInterface: Nomess\Component\Orm\QueryWriter\Mysql\CreateQuery
+        Nomess\Component\Orm\QueryWriter\QueryUpdateInterface: Nomess\Component\Orm\QueryWriter\Mysql\UpdateQuery
+        Nomess\Component\Orm\QueryWriter\QueryDeleteInterface: Nomess\Component\Orm\QueryWriter\Mysql\DeleteQuery
+        Nomess\Component\Orm\QueryWriter\QuerySelectInterface: Nomess\Component\Orm\QueryWriter\Mysql\SelectQuery
+        Nomess\Component\Orm\QueryWriter\QueryJoinInterface: Nomess\Component\Orm\QueryWriter\Mysql\JoinQuery
+        Nomess\Component\Orm\QueryWriter\QueryFreeInterface: Nomess\Component\Orm\QueryWriter\Mysql\FreeQuery
+
+    components: # Mapping to yaml file of packages
+        nomess/cache: '%ROOT%vendor/nomess/cache/config/container.yaml'
+        nomess/parameter: '%ROOT%vendor/nomess/parameter/config/container.yaml'
+        nomess/orm: '%ROOT%vendor/nomess/orm/config/container.yaml'
+
+    application: # Mapping of services of your application
+
+
+
