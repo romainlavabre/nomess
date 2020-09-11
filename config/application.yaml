@@ -20,6 +20,9 @@ general:
     # auto | enable | disable
     toolbar: auto
 
+server:
+    user: root
+
 error_pages:
     template_engine: twig
     codes:
