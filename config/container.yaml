@@ -1,4 +1,3 @@
-___
 # Map your services here
 services:
     framework: # Internal mapping, do not alter it
