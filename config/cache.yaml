@@ -28,7 +28,18 @@ cache:
         revalidation_rules: []
         removed_by_cli: true
         return: array
-
+    orm:
+        enable: auto
+        path: orm/
+        parameters:
+            value:
+                type: array
+            filename:
+                type: string
+                constraint: NOT_EMPTY
+        revalidation_rules: []
+        removed_by_cli: true
+        return: array
 
 rules:
     # You can add your rule
@@ -43,7 +54,3 @@ rules:
         NOT_NULL:
             function: 'is_null'
             expected: false
-
-
-
-
