@@ -6,9 +6,9 @@ general:
     status: enable
 
     path:
-        default_error_log: '%ROOT%var/error/error.log'
+        default_error_log: '%ROOT%var/log/error.log'
         default_cache: '%ROOT%var/cache/'
-        default_config_component: '%ROOT%'
+        default_config_component: '%ROOT%config/components/'
 
         # Application sources
         default_controller: '%ROOT%src/Controller/'
