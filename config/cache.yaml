@@ -5,8 +5,11 @@ cache:
         enable: auto
         # path: routes/
         parameters:
-            value: [type: array, constraint: NOT_NULL]
-            filename: [default: routes_match]
+            value:
+                type: array
+                constraint: NOT_NULL
+            filename:
+                default: routes_match
         revalidation_rules: []
         removed_by_cli: true
         return: array
@@ -14,8 +17,11 @@ cache:
     container:
         enable: auto
         parameters:
-            value: [type: array, constraint: NOT_EMPTY]
-            filename: [default: container]
+            value:
+                type: array
+                constraint: NOT_EMPTY
+            filename:
+                default: container
         revalidation_rules: []
         removed_by_cli: true
         return: array
@@ -23,8 +29,10 @@ cache:
     filters:
         enable: auto
         parameters:
-            value: [type: array]
-            filename: [default: filters_match]
+            value:
+                type: array
+            filename:
+                default: filters_match
         revalidation_rules: []
         removed_by_cli: true
         return: array
