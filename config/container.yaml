@@ -2,6 +2,7 @@
 services:
     framework: # Internal mapping, do not alter it
         Nomess\Component\Orm\EntityManagerInterface: Nomess\Component\Orm\EntityManager
+        Nomess\Component\Config\ConfigStoreInterface: Nomess\Component\Config\ConfigHandler
         Nomess\Container\ContainerInterface: Nomess\Container\Container
         Nomess\Component\Orm\Driver\DriverHandlerInterface: Nomess\Component\Orm\Driver\Pdo\PdoDriver
         Nomess\Component\Orm\QueryWriter\QueryCreateInterface: Nomess\Component\Orm\QueryWriter\Mysql\CreateQuery
@@ -15,8 +16,6 @@ services:
         nomess/cache: '%ROOT%vendor/nomess/cache/config/container.yaml'
         nomess/parameter: '%ROOT%vendor/nomess/parameter/config/container.yaml'
         nomess/orm: '%ROOT%vendor/nomess/orm/config/container.yaml'
+        nomess/cli: '%ROOT%vendor/nomess/cli/config/container.yaml'
 
     application: # Mapping of services of your application
-
-
-
