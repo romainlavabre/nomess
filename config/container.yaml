@@ -11,11 +11,14 @@ services:
         Nomess\Component\Orm\QueryWriter\QuerySelectInterface: Nomess\Component\Orm\QueryWriter\Mysql\SelectQuery
         Nomess\Component\Orm\QueryWriter\QueryJoinInterface: Nomess\Component\Orm\QueryWriter\Mysql\JoinQuery
         Nomess\Component\Orm\QueryWriter\QueryFreeInterface: Nomess\Component\Orm\QueryWriter\Mysql\FreeQuery
+        Nomess\Event\EventListenerInterface: Nomess\Event\EventListener
+        Nomess\Event\EventSubscriberInterface: Nomess\Event\EventSubscriber
 
     components: # Mapping to yaml file of packages
         nomess/cache: '%ROOT%vendor/nomess/cache/config/container.yaml'
         nomess/parameter: '%ROOT%vendor/nomess/parameter/config/container.yaml'
         nomess/orm: '%ROOT%vendor/nomess/orm/config/container.yaml'
         nomess/cli: '%ROOT%vendor/nomess/cli/config/container.yaml'
+        nomess/parser: '%ROOT%vendor/nomess/parser/config/container.yaml'
 
     application: # Mapping of services of your application
