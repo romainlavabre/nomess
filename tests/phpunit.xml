@@ -6,7 +6,7 @@
          stopOnSkipped="false" stopOnRisky="false" verbose="true">
     <coverage processUncoveredFiles="true">
         <include>
-            <directory suffix=".php">../src/Modules</directory>
+            <directory suffix=".php">../src/Package</directory>
         </include>
     </coverage>
 </phpunit>
